@@ -50,16 +50,22 @@ lines(c(0,(par("usr")[2])),c(H[which(H_impact>=0)[1]],H[which(H_impact>=0)[1]]),
 lines(c(0,(par("usr")[2])),c(50,50),lty=3)
 
 # Add arrows to the phase plane that denote habitat responses relative to equilbrium points (requires 'shape' package)
-Arrows(x0 = (par("usr")[2]), x1 = (par("usr")[2]),y0 = 50,y1=60,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15)
+Arrows(x0 = (par("usr")[2]), x1 = (par("usr")[2]),y0 = 60,y1=75,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15)
 Arrows(x0 = (par("usr")[2]), x1 = (par("usr")[2]),y0 = 40,y1=25,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15)
-Arrows(x0 = (par("usr")[2]), x1 = (par("usr")[2]),y0 = 80,y1=H[which(H_impact>=0)[1]]+10,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15, col="darkblue")
-Arrows(x0 = (par("usr")[2]), x1 = (par("usr")[2]),y0 = 80,y1=H[which(H_impact>=0)[1]]-10,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15, col="darkblue")
+Arrows(x0 = 3, x1 = 3,y0 = 80,y1=H[which(H_impact>=0)[1]]+10,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15, col="darkblue")
+Arrows(x0 = 3, x1 = 3,y0 = 75,y1=65,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15, col="darkblue")
 
-# Add solid and open points to denote stable and unstable equilibria, respectively, to the pahse plane 
+# Add solid and open points to denote stable and unstable equilibria, respectively, to the phase plane 
 points(x = (par("usr")[2]), y = 50, pch = 21, cex=1.5, col = "black",las = 1, xpd = TRUE,bg="white")
 points(x = (par("usr")[2]), y = 100, pch = 16, cex=1.5, col = "black",las = 1, xpd = TRUE)
 points(x = (par("usr")[2]), y = 0, pch = 16, cex=1.5, col = "black",las = 1, xpd = TRUE)
-points(x = (par("usr")[2]), y = H[which(H_impact>=0)[1]], pch = 21, cex=1.5, col = "blue",bg="white",las = 1, xpd = TRUE)
+points(x = 3, y = H[which(H_impact>=0)[1]], pch = 21, cex=1.5, col = "blue",bg="white",las = 1, xpd = TRUE)
+points(x = 3, y = 100, pch = 16, cex=1.5, col = "black",las = 1, xpd = TRUE)
+points(x = 3, y = 0, pch = 16, cex=1.5, col = "darkblue",las = 1, xpd = TRUE)
+
+# Add a legend to the plot
+legend(0.75,20,lty=1,legend=c("Impact (i) = 0","Impact (i) = 0.01"),col=c("black","blue"),cex=1)
+
 
 # Add a legend to the plot
 legend(0.75,20,lty=1,legend=c("Impact (i) = 0","Impact (i) = 0.01"),col=c("black","blue"),cex=1)
