@@ -168,6 +168,6 @@ plot(dl.vec[dl.val],imp,type="l",ylim=c(0,.15),xlim=c(0,30),xlab="Mitigation del
 
 # Write outputs to file
 write.table(cbind(dl.vec[dl.val],imp),file= "OffsetSpace.txt",
-	quote=T,sep="\t",row.names=F,col.names=c("Delay","Impact"))
+	quote=TRUE,sep="\t",row.names=FALSE,col.names=c("Delay","Impact"))
 
 
