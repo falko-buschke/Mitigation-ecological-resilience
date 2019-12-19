@@ -45,14 +45,6 @@ eco_mitigate <- function(t, H, parms) {
 }
 
 
-# Define the name of the plot (plus dimensions); alternative directories can be identified here
-png(filename="Fig3.png",width=32,height=8,units="cm",res=300)
-
-# Set plot margins and layouts
-par(mai=c(0.5,0.6,0.15,0.1))
-par(mfrow=c(1,2))
-
-
 # Set the incremental values for the mutltiplier, m.
 multiplier <- seq(1,10,by=0.1)
 
