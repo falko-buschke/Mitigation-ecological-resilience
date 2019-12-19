@@ -46,8 +46,11 @@ lines(H~H_impact,col="blue",lty=1)
 abline(v=0,lwd=2,col="grey")
 
 # Add dashed lines that link the equilibria pointss to the phase plane denoted on the secondary vertical axis
-lines(c(0,(par("usr")[2])),c(H[which(H_impact>=0)[1]],H[which(H_impact>=0)[1]]),lty=3,col="blue")
+lines(c(0,3,c(H[which(H_impact>=0)[1]],H[which(H_impact>=0)[1]]),lty=3,col="blue")
 lines(c(0,(par("usr")[2])),c(50,50),lty=3)
+
+# Add vertical line for second phase plane in the counerfactual
+abline(v=3,col="darkblue")
 
 # Add arrows to the phase plane that denote habitat responses relative to equilbrium points (requires 'shape' package)
 Arrows(x0 = (par("usr")[2]), x1 = (par("usr")[2]),y0 = 60,y1=75,las = 1, xpd = TRUE,arr.type="triangle", arr.width=0.15)
