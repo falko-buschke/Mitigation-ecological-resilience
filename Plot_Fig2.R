@@ -369,7 +369,7 @@ lines(space$Delay_95,space$Impact_95,col="darkblue",lty=2)
 text(19,0.07,"Net loss by 2050",cex=1.5)
 
 # Add a legend
-legend(16,0.147,lty=c(2,1), 
+legend(16,0.147,lty=c(2,1), bg="white",
 	col=c("darkblue", "darkblue","blue","blue","lightblue","lightblue"),
 	legend=c("95 (+2%)","90 (+1.5%)","85 (+1.2%)","80 (+0.9%)","75 (+0.7%)","70 (+0.6%)"),cex=1)
 
